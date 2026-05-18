@@ -45,6 +45,27 @@ html {
     font-size: 16px;
 }
 
+/* === DARK MODE VARIABLES === */
+[data-theme="dark"] {
+    --white: #0f0f0f;
+    --gray-50: #141414;
+    --gray-100: #1a1a1a;
+    --gray-200: #242424;
+    --gray-300: #333333;
+    --gray-400: #6b6b6b;
+    --gray-500: #8a8a8a;
+    --gray-600: #a3a3a3;
+    --gray-700: #c2c2c2;
+    --gray-800: #e0e0e0;
+    --gray-900: #f5f5f5;
+    --black: #ffffff;
+    --accent-subtle: rgba(59,130,246,0.12);
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.2);
+    --shadow-md: 0 4px 16px rgba(0,0,0,0.4);
+    --shadow-lg: 0 12px 40px rgba(0,0,0,0.5);
+    --shadow-xl: 0 20px 60px rgba(0,0,0,0.6);
+}
+
 body {
     font-family: var(--font-primary);
     color: var(--gray-800);
@@ -1288,4 +1309,127 @@ body {
         flex-direction: column;
         align-items: center;
     }
+}
+
+/* === DARK MODE — BODY & GLOBAL TRANSITION === */
+body {
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+[data-theme="dark"] body,
+[data-theme="dark"] {
+    background: var(--white);
+    color: var(--gray-800);
+}
+
+/* === DARK MODE — NAVBAR === */
+[data-theme="dark"] .navbar.scrolled {
+    background: rgba(15, 15, 15, 0.92);
+    box-shadow: 0 1px 20px rgba(0,0,0,0.4);
+}
+
+[data-theme="dark"] .navbar:not(.scrolled) {
+    background: transparent;
+}
+
+/* === DARK MODE — HERO === */
+[data-theme="dark"] .hero {
+    background: linear-gradient(135deg, #0f0f0f 0%, #141414 50%, #0f0f0f 100%);
+}
+
+[data-theme="dark"] .hero-pc-image {
+    background: linear-gradient(145deg, #1a1a1a, #141414);
+    border-color: var(--gray-200);
+}
+
+[data-theme="dark"] .hero-float-card {
+    background: rgba(20, 20, 20, 0.9);
+    border-color: rgba(255,255,255,0.06);
+}
+
+/* === DARK MODE — SLIDER / BRANDS === */
+[data-theme="dark"] .brands-section {
+    background: var(--gray-50);
+    border-color: var(--gray-200);
+}
+
+[data-theme="dark"] .slider {
+    background: #ffffff;
+    box-shadow: 0 10px 30px -8px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .slider::before {
+    background: linear-gradient(to right, #ffffff 0%, transparent 100%);
+}
+
+[data-theme="dark"] .slider::after {
+    background: linear-gradient(to left, #ffffff 0%, transparent 100%);
+}
+
+/* === DARK MODE — CATEGORY CARDS === */
+[data-theme="dark"] .category-card {
+    background: var(--gray-100);
+    border-color: var(--gray-200);
+}
+
+[data-theme="dark"] .category-icon {
+    background: var(--gray-200);
+}
+
+/* === DARK MODE — PRODUCT CARDS === */
+[data-theme="dark"] .product-card {
+    background: var(--gray-100);
+    border-color: var(--gray-200);
+}
+
+[data-theme="dark"] .product-image {
+    background: linear-gradient(135deg, var(--gray-100), var(--gray-200));
+}
+
+/* === DARK MODE — BUILD CARDS === */
+[data-theme="dark"] .build-card {
+    background: linear-gradient(160deg, var(--gray-100), var(--gray-200));
+    border-color: var(--gray-200);
+}
+
+[data-theme="dark"] .build-overlay {
+    background: rgba(20, 20, 20, 0.88);
+    border-color: var(--gray-200);
+}
+
+/* === DARK MODE — WHY CARDS === */
+[data-theme="dark"] .why-card {
+    background: var(--gray-100);
+    border-color: var(--gray-200);
+}
+
+/* === DARK MODE — FOOTER === */
+[data-theme="dark"] .footer {
+    background: #080808;
+}
+
+[data-theme="dark"] .footer-bottom {
+    border-color: #1e1e1e;
+}
+
+[data-theme="dark"] .footer-socials a {
+    background: #1a1a1a;
+}
+
+[data-theme="dark"] .newsletter-form input {
+    background: #1a1a1a;
+    border-color: #2a2a2a;
+}
+
+/* === THEME TOGGLE BUTTON === */
+.theme-toggle {
+    position: relative;
+}
+
+.theme-toggle i {
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+}
+
+[data-theme="dark"] .theme-toggle i::before {
+    content: "\eb62"; /* ri-sun-line codepoint */
 }

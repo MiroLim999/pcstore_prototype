@@ -56,7 +56,33 @@
         });
     }
 
-    // === SMOOTH SCROLL FOR NAV LINKS ===
+    // === DARK MODE TOGGLE ===
+    const themeToggle = document.getElementById('themeToggle');
+    const html = document.documentElement;
+
+    // Load saved preference
+    const savedTheme = localStorage.getItem('nexus-theme') || 'light';
+    html.setAttribute('data-theme', savedTheme);
+    updateToggleIcon(savedTheme);
+
+    themeToggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('nexus-theme', next);
+        updateToggleIcon(next);
+    });
+
+    function updateToggleIcon(theme) {
+        const icon = themeToggle.querySelector('i');
+        if (theme === 'dark') {
+            icon.className = 'ri-sun-line';
+        } else {
+            icon.className = 'ri-moon-line';
+        }
+    }
+
+
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener('click', function (e) {
             const target = document.querySelector(this.getAttribute('href'));
