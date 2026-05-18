@@ -498,7 +498,7 @@ ul { list-style: none; }
 .sc-card {
     position: relative;
     overflow: hidden;
-    border-radius: 12px;
+    border-radius: var(--radius);
     cursor: pointer;
     transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease), opacity 0.3s var(--ease);
     text-decoration: none;
@@ -1002,7 +1002,7 @@ ul { list-style: none; }
     max-width: 600px;
     background: var(--bg);
     border: 1px solid var(--border);
-    border-radius: 14px;
+    border-radius: var(--radius);
     overflow: hidden;
     box-shadow: var(--shadow-l);
     transform: translateY(-10px);
