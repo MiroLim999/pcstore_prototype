@@ -41,7 +41,7 @@
             if (entry.isIntersecting) {
                 const cards = Array.from(entry.target.parentElement.querySelectorAll('.sc-card'));
                 const i = cards.indexOf(entry.target);
-                setTimeout(() => entry.target.classList.add('sc-visible'), i * 100);
+                setTimeout(() => entry.target.classList.add('sc-visible'), i * 50);
                 bentoObserver.unobserve(entry.target);
             }
         });
