@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS PC — Premium Gaming Builds</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <i class="ri-computer-line"></i>
+                <span>NEXUS</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#catalog">Catalog</a></li>
+                <li><a href="#categories">Components</a></li>
+                <li><a href="#builds">Build PC</a></li>
+                <li><a href="#footer">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="nav-icon" aria-label="Search"><i class="ri-search-line"></i></button>
+                <button class="nav-icon cart-icon" aria-label="Cart">
+                    <i class="ri-shopping-bag-line"></i>
+                    <span class="cart-badge">3</span>
+                </button>
+                <button class="nav-mobile-toggle" aria-label="Menu"><i class="ri-menu-4-line"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-elements">
+            <div class="hero-circle hero-circle-1"></div>
+            <div class="hero-circle hero-circle-2"></div>
+            <div class="hero-circle hero-circle-3"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="ri-flashlight-line"></i>
+                    <span>Next-Gen Performance</span>
+                </div>
+                <h1 class="hero-title">
+                    Build Your<br>
+                    <span class="hero-title-accent">Dream</span> Gaming<br>
+                    Setup
+                </h1>
+                <p class="hero-subtitle">
+                    Handcrafted high-performance PCs engineered for creators, 
+                    gamers, and professionals. Premium components, zero compromise.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#builds" class="btn btn-primary">
+                        <span>Build PC Now</span>
+                        <i class="ri-arrow-right-line"></i>
+                    </a>
+                    <a href="#catalog" class="btn btn-secondary">
+                        <span>Browse Catalog</span>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">15K+</span>
+                        <span class="hero-stat-label">Builds Shipped</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">99%</span>
+                        <span class="hero-stat-label">Satisfaction</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">3yr</span>
+                        <span class="hero-stat-label">Warranty</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-pc-wrapper" id="heroPC">
+                    <div class="hero-pc-glow"></div>
+                    <div class="hero-pc-image">
+                        <i class="ri-computer-line hero-pc-icon"></i>
+                    </div>
+                    <div class="hero-float-card float-card-1">
+                        <i class="ri-cpu-line"></i>
+                        <div>
+                            <span class="float-card-title">Ryzen 9 7950X</span>
+                            <span class="float-card-sub">16 Cores • 5.7GHz</span>
+                        </div>
+                    </div>
+                    <div class="hero-float-card float-card-2">
+                        <i class="ri-gamepad-line"></i>
+                        <div>
+                            <span class="float-card-title">RTX 4090</span>
+                            <span class="float-card-sub">24GB GDDR6X</span>
+                        </div>
+                    </div>
+                    <div class="hero-float-card float-card-3">
+                        <i class="ri-database-2-line"></i>
+                        <div>
+                            <span class="float-card-title">64GB DDR5</span>
+                            <span class="float-card-sub">6000MHz CL30</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BRAND CAROUSEL -->
+    <section class="brands-section">
+        <div class="brands-label">Trusted by industry leaders</div>
+        <div class="brands-carousel">
+            <div class="brands-track">
+                <div class="brand-card"><span>NVIDIA</span></div>
+                <div class="brand-card"><span>AMD</span></div>
+                <div class="brand-card"><span>Intel</span></div>
+                <div class="brand-card"><span>ASUS</span></div>
+                <div class="brand-card"><span>MSI</span></div>
+                <div class="brand-card"><span>Gigabyte</span></div>
+                <div class="brand-card"><span>Corsair</span></div>
+                <div class="brand-card"><span>Kingston</span></div>
+                <div class="brand-card"><span>Samsung</span></div>
+                <div class="brand-card"><span>Logitech</span></div>
+                <div class="brand-card"><span>Razer</span></div>
+                <!-- Duplicate for seamless loop -->
+                <div class="brand-card"><span>NVIDIA</span></div>
+                <div class="brand-card"><span>AMD</span></div>
+                <div class="brand-card"><span>Intel</span></div>
+                <div class="brand-card"><span>ASUS</span></div>
+                <div class="brand-card"><span>MSI</span></div>
+                <div class="brand-card"><span>Gigabyte</span></div>
+                <div class="brand-card"><span>Corsair</span></div>
+                <div class="brand-card"><span>Kingston</span></div>
+                <div class="brand-card"><span>Samsung</span></div>
+                <div class="brand-card"><span>Logitech</span></div>
+                <div class="brand-card"><span>Razer</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATEGORIES SECTION -->
+    <section class="categories" id="categories">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Components</span>
+                <h2 class="section-title">Browse by Category</h2>
+                <p class="section-subtitle">Find exactly what your build needs</p>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card" data-reveal>
+                    <div class="category-icon"><i class="ri-gpu-card-line"></i></div>
+                    <h3>Graphics Cards</h3>
+                    <p>Latest RTX & RX series GPUs</p>
+                    <span class="category-arrow"><i class="ri-arrow-right-up-line"></i></span>
+                </div>
+                <div class="category-card" data-reveal>
+                    <div class="category-icon"><i class="ri-cpu-line"></i></div>
+                    <h3>Processors</h3>
+                    <p>AMD Ryzen & Intel Core</p>
+                    <span class="category-arrow"><i class="ri-arrow-right-up-line"></i></span>
+                </div>
+                <div class="category-card" data-reveal>
+                    <div class="category-icon"><i class="ri-motherboard-line"></i></div>
+                    <h3>Motherboards</h3>
+                    <p>ATX, mATX & Mini-ITX</p>
+                    <span class="category-arrow"><i class="ri-arrow-right-up-line"></i></span>
+                </div>
+                <div class="category-card" data-reveal>
+                    <div class="category-icon"><i class="ri-ram-line"></i></div>
+                    <h3>RAM</h3>
+                    <p>DDR5 high-performance kits</p>
+                    <span class="category-arrow"><i class="ri-arrow-right-up-line"></i></span>
+                </div>
+                <div class="category-card" data-reveal>
+                    <div class="category-icon"><i class="ri-hard-drive-3-line"></i></div>
+                    <h3>SSD Storage</h3>
+                    <p>NVMe Gen5 & SATA drives</p>
+                    <span class="category-arrow"><i class="ri-arrow-right-up-line"></i></span>
+                </div>
+                <div class="category-card" data-reveal>
+                    <div class="category-icon"><i class="ri-plug-line"></i></div>
+                    <h3>Power Supplies</h3>
+                    <p>80+ Gold & Platinum PSUs</p>
+                    <span class="category-arrow"><i class="ri-arrow-right-up-line"></i></span>
+                </div>
+                <div class="category-card" data-reveal>
+                    <div class="category-icon"><i class="ri-box-3-line"></i></div>
+                    <h3>PC Cases</h3>
+                    <p>Airflow & showcase builds</p>
+                    <span class="category-arrow"><i class="ri-arrow-right-up-line"></i></span>
+                </div>
+                <div class="category-card" data-reveal>
+                    <div class="category-icon"><i class="ri-temp-cold-line"></i></div>
+                    <h3>Cooling Systems</h3>
+                    <p>AIO liquid & tower coolers</p>
+                    <span class="category-arrow"><i class="ri-arrow-right-up-line"></i></span>
+                </div>
+                <div class="category-card" data-reveal>
+                    <div class="category-icon"><i class="ri-monitor-line"></i></div>
+                    <h3>Gaming Monitors</h3>
+                    <p>4K 240Hz OLED panels</p>
+                    <span class="category-arrow"><i class="ri-arrow-right-up-line"></i></span>
+                </div>
+                <div class="category-card" data-reveal>
+                    <div class="category-icon"><i class="ri-keyboard-box-line"></i></div>
+                    <h3>Peripherals</h3>
+                    <p>Keyboards, mice & headsets</p>
+                    <span class="category-arrow"><i class="ri-arrow-right-up-line"></i></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED PRODUCTS -->
+    <section class="products" id="catalog">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Featured</span>
+                <h2 class="section-title">Top Picks This Week</h2>
+                <p class="section-subtitle">Curated selection of premium components</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card" data-reveal>
+                    <div class="product-image">
+                        <i class="ri-gpu-card-line"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3>GeForce RTX 4090</h3>
+                        <p class="product-specs">24GB GDDR6X • 450W TDP</p>
+                        <div class="product-footer">
+                            <span class="product-price">$1,599</span>
+                            <button class="product-btn">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-reveal>
+                    <div class="product-image">
+                        <i class="ri-cpu-line"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3>Ryzen 9 7950X3D</h3>
+                        <p class="product-specs">16 Cores • 144MB Cache</p>
+                        <div class="product-footer">
+                            <span class="product-price">$699</span>
+                            <button class="product-btn">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-reveal>
+                    <div class="product-image">
+                        <i class="ri-motherboard-line"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3>ROG Crosshair X670E</h3>
+                        <p class="product-specs">AM5 • DDR5 • PCIe 5.0</p>
+                        <div class="product-footer">
+                            <span class="product-price">$499</span>
+                            <button class="product-btn">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-reveal>
+                    <div class="product-image">
+                        <i class="ri-ram-line"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3>G.Skill Trident Z5 RGB</h3>
+                        <p class="product-specs">64GB DDR5 • 6400MHz CL32</p>
+                        <div class="product-footer">
+                            <span class="product-price">$289</span>
+                            <button class="product-btn">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-reveal>
+                    <div class="product-image">
+                        <i class="ri-hard-drive-3-line"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3>Samsung 990 Pro</h3>
+                        <p class="product-specs">2TB NVMe • 7450MB/s</p>
+                        <div class="product-footer">
+                            <span class="product-price">$179</span>
+                            <button class="product-btn">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-reveal>
+                    <div class="product-image">
+                        <i class="ri-monitor-line"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3>LG 27GR95QE OLED</h3>
+                        <p class="product-specs">27" 1440p • 240Hz • 0.03ms</p>
+                        <div class="product-footer">
+                            <span class="product-price">$899</span>
+                            <button class="product-btn">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PREMIUM BUILD SHOWCASE -->
+    <section class="builds" id="builds">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Pre-Built Systems</span>
+                <h2 class="section-title">Signature Builds</h2>
+                <p class="section-subtitle">Expertly configured, rigorously tested, ready to dominate</p>
+            </div>
+            <div class="builds-grid">
+                <div class="build-card" data-reveal>
+                    <div class="build-visual">
+                        <i class="ri-computer-line"></i>
+                        <div class="build-tier">Entry</div>
+                    </div>
+                    <div class="build-overlay">
+                        <h3>Budget Build</h3>
+                        <p class="build-tagline">Smart performance, honest price</p>
+                        <ul class="build-specs">
+                            <li>Ryzen 5 7600</li>
+                            <li>RTX 4060 Ti</li>
+                            <li>16GB DDR5</li>
+                            <li>1TB NVMe SSD</li>
+                        </ul>
+                        <span class="build-price">From $899</span>
+                    </div>
+                </div>
+                <div class="build-card build-card-featured" data-reveal>
+                    <div class="build-visual">
+                        <i class="ri-computer-line"></i>
+                        <div class="build-tier">Popular</div>
+                    </div>
+                    <div class="build-overlay">
+                        <h3>Mid-Range Beast</h3>
+                        <p class="build-tagline">The sweet spot of power</p>
+                        <ul class="build-specs">
+                            <li>Ryzen 7 7800X3D</li>
+                            <li>RTX 4070 Ti Super</li>
+                            <li>32GB DDR5</li>
+                            <li>2TB NVMe SSD</li>
+                        </ul>
+                        <span class="build-price">From $1,599</span>
+                    </div>
+                </div>
+                <div class="build-card" data-reveal>
+                    <div class="build-visual">
+                        <i class="ri-computer-line"></i>
+                        <div class="build-tier">Ultimate</div>
+                    </div>
+                    <div class="build-overlay">
+                        <h3>Ultimate RGB Build</h3>
+                        <p class="build-tagline">No limits, full spectacle</p>
+                        <ul class="build-specs">
+                            <li>Ryzen 9 7950X3D</li>
+                            <li>RTX 4090</li>
+                            <li>64GB DDR5</li>
+                            <li>4TB NVMe SSD</li>
+                        </ul>
+                        <span class="build-price">From $3,299</span>
+                    </div>
+                </div>
+                <div class="build-card" data-reveal>
+                    <div class="build-visual">
+                        <i class="ri-live-line"></i>
+                        <div class="build-tier">Creator</div>
+                    </div>
+                    <div class="build-overlay">
+                        <h3>Streaming Workstation</h3>
+                        <p class="build-tagline">Create without boundaries</p>
+                        <ul class="build-specs">
+                            <li>Intel i9-14900K</li>
+                            <li>RTX 4080 Super</li>
+                            <li>64GB DDR5</li>
+                            <li>4TB NVMe RAID</li>
+                        </ul>
+                        <span class="build-price">From $2,899</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="why-us" id="why-us">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Why NEXUS</span>
+                <h2 class="section-title">Built Different</h2>
+                <p class="section-subtitle">What sets us apart from the rest</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-card" data-reveal>
+                    <div class="why-icon"><i class="ri-shield-check-line"></i></div>
+                    <h3>Genuine Components</h3>
+                    <p>Only authorized, factory-sealed parts from official distributors</p>
+                </div>
+                <div class="why-card" data-reveal>
+                    <div class="why-icon"><i class="ri-service-line"></i></div>
+                    <h3>Warranty Support</h3>
+                    <p>Up to 3 years coverage with dedicated priority service</p>
+                </div>
+                <div class="why-card" data-reveal>
+                    <div class="why-icon"><i class="ri-tools-line"></i></div>
+                    <h3>Expert Build Assistance</h3>
+                    <p>Our engineers help you configure the perfect system</p>
+                </div>
+                <div class="why-card" data-reveal>
+                    <div class="why-icon"><i class="ri-rocket-line"></i></div>
+                    <h3>Fast Service</h3>
+                    <p>48-hour build turnaround with express shipping options</p>
+                </div>
+                <div class="why-card" data-reveal>
+                    <div class="why-icon"><i class="ri-group-line"></i></div>
+                    <h3>Trusted by Gamers</h3>
+                    <p>15,000+ builds delivered to satisfied customers worldwide</p>
+                </div>
+                <div class="why-card" data-reveal>
+                    <div class="why-icon"><i class="ri-checkbox-circle-line"></i></div>
+                    <h3>Compatibility Checked</h3>
+                    <p>Every build verified for thermal, power, and clearance fit</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#" class="nav-logo">
+                        <i class="ri-computer-line"></i>
+                        <span>NEXUS</span>
+                    </a>
+                    <p>Premium custom-built PCs for gamers, creators, and professionals. Engineered to perform.</p>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
+                        <a href="#" aria-label="Discord"><i class="ri-discord-line"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="#">Gaming PCs</a></li>
+                        <li><a href="#">Workstations</a></li>
+                        <li><a href="#">Components</a></li>
+                        <li><a href="#">Peripherals</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Get early access to deals and new builds.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="your@email.com" aria-label="Email">
+                        <button type="submit"><i class="ri-send-plane-line"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 NEXUS PC. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Shipping</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
