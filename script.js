@@ -46,7 +46,7 @@
     const modal = document.getElementById('galleryModal');
     const modalImg = document.getElementById('modalImg');
     const modalCounter = document.getElementById('modalCounter');
-    const cells = Array.from(document.querySelectorAll('.bento-cell[data-img]'));
+    const cells = Array.from(document.querySelectorAll('[data-img]'));
     const images = cells.map(c => c.getAttribute('data-img'));
     let currentIdx = 0;
 
