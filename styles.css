@@ -533,7 +533,7 @@ body {
 
 @keyframes scroll-slider {
     0%   { transform: translateX(0); }
-    100% { transform: translateX(calc(-200px * 11)); }
+    100% { transform: translateX(calc(-200px * 12)); }
 }
 
 .slider {
@@ -569,7 +569,7 @@ body {
 .slide-track {
     animation: scroll-slider 40s linear infinite;
     display: flex;
-    width: calc(200px * 22);
+    width: calc(200px * 24);
 }
 
 .slider:hover .slide-track {
