@@ -338,7 +338,7 @@ ul { list-style: none; }
 
 /* === CATEGORIES === */
 .categories {
-    padding: 3.5rem 0 2rem;
+    padding: 3rem 0 3rem;
 }
 
 .cat-grid {
@@ -397,7 +397,7 @@ ul { list-style: none; }
 
 /* === PRODUCTS === */
 .products {
-    padding: 4rem 0 5rem;
+    padding: 3rem 0 5rem;
     background: var(--bg-alt);
     border-top: 1px solid var(--border);
 }
@@ -475,7 +475,7 @@ ul { list-style: none; }
 
 /* === BENTO GRID GALLERY === */
 .bento {
-    padding: 5rem 0;
+    padding: 3rem 0;
 }
 
 /* 12-column grid, each unit = 1fr, rows auto */
@@ -821,9 +821,90 @@ ul { list-style: none; }
 .footer-bar a { color: rgba(255,255,255,0.35); margin-left: 1.5rem; transition: color var(--speed); }
 .footer-bar a:hover { color: #fff; }
 
+/* === HOW IT WORKS === */
+.how-it-works {
+    padding: 3rem 0;
+    border-top: 1px solid var(--border);
+}
+
+.how-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+}
+
+.how-step {
+    position: relative;
+    padding: 2rem 1.75rem;
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    transition: transform var(--speed) var(--ease), box-shadow var(--speed) var(--ease), border-color var(--speed);
+}
+
+.how-step:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-m);
+    border-color: var(--accent);
+}
+
+.how-num {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.75rem;
+    font-family: var(--ff-display);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--fg);
+    opacity: 0.06;
+    letter-spacing: -2px;
+    transition: opacity var(--speed);
+}
+
+.how-step:hover .how-num {
+    opacity: 0.12;
+    color: var(--accent);
+}
+
+.how-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    font-size: 1.5rem;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border-radius: 10px;
+    margin-bottom: 1.25rem;
+}
+
+.how-step h3 {
+    font-family: var(--ff-display);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--fg);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.3px;
+}
+
+.how-step p {
+    font-size: 0.85rem;
+    color: var(--fg-muted);
+    line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+    .how-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+    .how-grid { grid-template-columns: 1fr; }
+}
+
 /* === FEATURED BRANDS STRIP === */
 .brands-strip {
-    padding: 5rem 0;
+    padding: 3rem 0;
     border-top: 1px solid var(--border);
 }
 
