@@ -319,6 +319,10 @@ ul { list-style: none; }
 }
 .slide:hover img { transform: scale(1.1); }
 
+[data-theme="dark"] .slide img {
+    filter: brightness(0) invert(1) opacity(0.6);
+}
+
 /* === SECTION COMMON === */
 .sec-head {
     margin-bottom: 2rem;
