@@ -533,9 +533,9 @@ body {
 /* === BRANDS CAROUSEL (slider) === */
 .brands-section {
     padding: 4rem 0;
-    background: var(--gray-50);
-    border-top: 1px solid var(--gray-100);
-    border-bottom: 1px solid var(--gray-100);
+    background: transparent;
+    border-top: none;
+    border-bottom: none;
 }
 
 .brands-label {
@@ -558,8 +558,10 @@ body {
 }
 
 .slider {
-    background: var(--white);
-    box-shadow: 0 10px 30px -8px rgba(0, 0, 0, 0.08);
+    background: transparent;
+    box-shadow: none;
+    border-top: 1px solid var(--gray-200);
+    border-bottom: 1px solid var(--gray-200);
     height: 100px;
     overflow: hidden;
     position: relative;
@@ -586,7 +588,6 @@ body {
     right: 0;
     background: linear-gradient(to left, var(--white) 0%, transparent 100%);
 }
-
 .slide-track {
     animation: scroll-slider 40s linear infinite;
     display: flex;
@@ -1348,22 +1349,18 @@ body {
 }
 
 /* === DARK MODE — SLIDER / BRANDS === */
-[data-theme="dark"] .brands-section {
-    background: var(--gray-50);
+[data-theme="dark"] .slider {
+    background: transparent;
+    box-shadow: none;
     border-color: var(--gray-200);
 }
 
-[data-theme="dark"] .slider {
-    background: #ffffff;
-    box-shadow: 0 10px 30px -8px rgba(0, 0, 0, 0.4);
-}
-
 [data-theme="dark"] .slider::before {
-    background: linear-gradient(to right, #ffffff 0%, transparent 100%);
+    background: linear-gradient(to right, var(--white) 0%, transparent 100%);
 }
 
 [data-theme="dark"] .slider::after {
-    background: linear-gradient(to left, #ffffff 0%, transparent 100%);
+    background: linear-gradient(to left, var(--white) 0%, transparent 100%);
 }
 
 /* === DARK MODE — CATEGORY CARDS === */
