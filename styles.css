@@ -218,6 +218,7 @@ body {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    margin-top: 60px;
 }
 
 .hero-bg-image {
@@ -390,7 +391,7 @@ body {
 
 /* === BRANDS CAROUSEL (slider) === */
 .brands-section {
-    padding: 4rem 0;
+    padding: 0;
     background: transparent;
     border-top: none;
     border-bottom: none;
