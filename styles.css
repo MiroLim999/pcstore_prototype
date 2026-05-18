@@ -486,7 +486,7 @@ body {
 }
 
 .section-header {
-    text-align: center;
+    text-align: left;
     margin-bottom: 4rem;
 }
 
@@ -516,12 +516,11 @@ body {
     font-size: 1.05rem;
     color: var(--gray-400);
     max-width: 500px;
-    margin: 0 auto;
 }
 
 /* === CATEGORIES === */
 .categories {
-    padding: 7rem 2rem;
+    padding: 2rem 2rem;
     background: var(--white);
 }
 
