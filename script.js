@@ -41,21 +41,6 @@
 
     revealElements.forEach((el) => revealObserver.observe(el));
 
-    // === HERO PARALLAX MOUSE EFFECT ===
-    const heroPC = document.getElementById('heroPC');
-
-    if (heroPC) {
-        document.addEventListener('mousemove', (e) => {
-            const { clientX, clientY } = e;
-            const centerX = window.innerWidth / 2;
-            const centerY = window.innerHeight / 2;
-            const moveX = (clientX - centerX) / centerX;
-            const moveY = (clientY - centerY) / centerY;
-
-            heroPC.style.transform = `translate(${moveX * 15}px, ${moveY * 10}px)`;
-        });
-    }
-
     // === DARK MODE TOGGLE ===
     const themeToggle = document.getElementById('themeToggle');
     const html = document.documentElement;
