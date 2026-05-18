@@ -34,6 +34,20 @@
     }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
     reveals.forEach(el => observer.observe(el));
 
+    // === BENTO GRID LOAD ANIMATION ===
+    const bentoCards = document.querySelectorAll('.sc-card');
+    const bentoObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                const cards = Array.from(entry.target.parentElement.querySelectorAll('.sc-card'));
+                const i = cards.indexOf(entry.target);
+                setTimeout(() => entry.target.classList.add('sc-visible'), i * 100);
+                bentoObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.05, rootMargin: '0px 0px -50px 0px' });
+    bentoCards.forEach(el => bentoObserver.observe(el));
+
     // === SMOOTH NAV LINKS ===
     document.querySelectorAll('a[href^="#"]').forEach(a => {
         a.addEventListener('click', e => {
