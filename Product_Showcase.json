@@ -1,0 +1,169 @@
+{
+  "id": "default",
+  "name": "Product Showcase",
+  "cards": [
+    {
+      "id": "card-1779108590618-0.9904171890406172",
+      "size": "large",
+      "x": 0,
+      "y": 0,
+      "backgroundImage": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600",
+      "text": "NEW COLLECTION",
+      "textColor": "#ffffff",
+      "textAlignment": "center",
+      "verticalAlignment": "top",
+      "fontSize": 28
+    },
+    {
+      "id": "card-1779108590618-0.6636333508058051",
+      "size": "square",
+      "x": 4,
+      "y": 0,
+      "backgroundColor": "#1f2937",
+      "text": "50%",
+      "subtitle": "OFF",
+      "textColor": "#fbbf24",
+      "textAlignment": "center",
+      "verticalAlignment": "center",
+      "fontSize": 32
+    },
+    {
+      "id": "card-1779108590618-0.7828607018128996",
+      "size": "portrait",
+      "x": 6,
+      "y": 0,
+      "backgroundImage": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400",
+      "text": ""
+    },
+    {
+      "id": "card-1779108590618-0.07993113712310196",
+      "size": "square",
+      "x": 8,
+      "y": 0,
+      "backgroundColor": "#ec4899",
+      "text": "Free",
+      "subtitle": "Shipping",
+      "textColor": "#ffffff",
+      "textAlignment": "center",
+      "verticalAlignment": "center",
+      "fontSize": 20
+    },
+    {
+      "id": "card-1779108590618-0.9996866752060466",
+      "size": "square",
+      "x": 10,
+      "y": 0,
+      "backgroundImage": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400",
+      "text": ""
+    },
+    {
+      "id": "card-1779108590618-0.5325509469061749",
+      "size": "square",
+      "x": 4,
+      "y": 2,
+      "backgroundImage": "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=400",
+      "text": ""
+    },
+    {
+      "id": "card-1779108590618-0.9208707126902443",
+      "size": "square",
+      "x": 8,
+      "y": 2,
+      "backgroundStyle": "fill",
+      "backgroundColor": "#60a5fa",
+      "text": "Premium",
+      "subtitle": "Quality",
+      "textColor": "#ffffff",
+      "textAlignment": "center",
+      "verticalAlignment": "center",
+      "fontSize": 18
+    },
+    {
+      "id": "card-1779108590618-0.62774214251069",
+      "size": "wide",
+      "x": 2,
+      "y": 4,
+      "backgroundStyle": "gradient",
+      "backgroundColor": "#60a5fa",
+      "text": "Shop Now",
+      "textColor": "#ffffff",
+      "textAlignment": "center",
+      "verticalAlignment": "center",
+      "fontSize": 42,
+      "gradient": {
+        "mode": "softBezier",
+        "warpShape": "domainWarping",
+        "warpStrength": 0.73,
+        "warpScale": 429,
+        "noiseAmount": 0.12,
+        "seed": 81420,
+        "colors": [
+          "#fba660",
+          "#b61aff"
+        ]
+      },
+      "titleTypography": {
+        "familyId": "supreme",
+        "weight": 800,
+        "style": "normal"
+      }
+    },
+    {
+      "id": "card-1779108590618-0.8845382537185512",
+      "size": "wide",
+      "x": 6,
+      "y": 4,
+      "backgroundStyle": "gradient",
+      "backgroundColor": "#ec4899",
+      "text": "Limited Time Offer",
+      "textColor": "#000000",
+      "textAlignment": "center",
+      "verticalAlignment": "center",
+      "fontSize": 36,
+      "gradient": {
+        "mode": "meshStatic",
+        "warpShape": "smoothNoise",
+        "warpStrength": 0.5,
+        "warpScale": 420,
+        "noiseAmount": 0.12,
+        "seed": 77470,
+        "colors": [
+          "#ec4899",
+          "#fcfcfc"
+        ]
+      },
+      "titleTypography": {
+        "familyId": "satoshi",
+        "weight": 400,
+        "style": "normal"
+      }
+    },
+    {
+      "id": "card-1779108618919",
+      "size": "square",
+      "x": 0,
+      "y": 4,
+      "backgroundColor": "#ef4444",
+      "text": "",
+      "textColor": "#1f2937",
+      "textAlignment": "left",
+      "textOrientation": "horizontal",
+      "fontSize": 16
+    },
+    {
+      "id": "card-1779108647195",
+      "size": "portrait",
+      "x": 10,
+      "y": 2,
+      "backgroundColor": "#8b5cf6",
+      "text": "",
+      "textColor": "#1f2937",
+      "textAlignment": "left",
+      "textOrientation": "horizontal",
+      "fontSize": 16
+    }
+  ],
+  "createdAt": 1779108664395,
+  "updatedAt": 1779108664395,
+  "version": 2
+}
