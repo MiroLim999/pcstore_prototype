@@ -41,7 +41,7 @@
             if (entry.isIntersecting) {
                 const cards = Array.from(entry.target.parentElement.querySelectorAll('.sc-card'));
                 const i = cards.indexOf(entry.target);
-                setTimeout(() => entry.target.classList.add('sc-visible'), i * 50);
+                setTimeout(() => entry.target.classList.add('sc-visible'), i * 30);
                 bentoObserver.unobserve(entry.target);
             }
         });
@@ -54,6 +54,66 @@
             const t = document.querySelector(a.getAttribute('href'));
             if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
         });
+    });
+
+    // === SEARCH FUNCTIONALITY ===
+    const searchOverlay = document.getElementById('searchOverlay');
+    const searchInput = document.getElementById('searchInput');
+    const searchResults = document.getElementById('searchResults');
+    const searchClose = document.getElementById('searchClose');
+    const searchBtn = document.querySelector('[aria-label="Search"]');
+
+    const searchData = [
+        { name: 'GeForce RTX 4090', cat: 'GPU', img: 'assets/categories/gpu.jpg' },
+        { name: 'RTX 4080 Super', cat: 'GPU', img: 'assets/categories/gpu.jpg' },
+        { name: 'Ryzen 9 7950X3D', cat: 'CPU', img: 'assets/categories/cpu.jpg' },
+        { name: 'Intel Core i9-14900K', cat: 'CPU', img: 'assets/categories/cpu.jpg' },
+        { name: 'ROG Crosshair X670E', cat: 'Motherboard', img: 'assets/categories/mobo.jpg' },
+        { name: 'G.Skill Trident Z5 RGB', cat: 'RAM', img: 'assets/categories/ram.jpg' },
+        { name: 'Samsung 990 Pro', cat: 'SSD', img: 'assets/categories/ssd.jpg' },
+        { name: 'Corsair RM1000x', cat: 'PSU', img: 'assets/categories/psu.jpg' },
+        { name: 'Lian Li O11 Dynamic', cat: 'Case', img: 'assets/categories/case.jpg' },
+        { name: 'Corsair H150i Elite', cat: 'Cooler', img: 'assets/categories/cooler.jpg' },
+    ];
+
+    function openSearch() {
+        searchOverlay.classList.add('active');
+        setTimeout(() => searchInput.focus(), 100);
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeSearch() {
+        searchOverlay.classList.remove('active');
+        searchInput.value = '';
+        searchResults.innerHTML = '';
+        document.body.style.overflow = '';
+    }
+
+    searchBtn.addEventListener('click', openSearch);
+    searchClose.addEventListener('click', closeSearch);
+    searchOverlay.addEventListener('click', (e) => { if (e.target === searchOverlay) closeSearch(); });
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && searchOverlay.classList.contains('active')) closeSearch();
+        if ((e.ctrlKey || e.metaKey) && e.key === 'k') { e.preventDefault(); openSearch(); }
+    });
+
+    searchInput.addEventListener('input', () => {
+        const q = searchInput.value.toLowerCase().trim();
+        if (!q) { searchResults.innerHTML = ''; return; }
+        const matches = searchData.filter(item =>
+            item.name.toLowerCase().includes(q) || item.cat.toLowerCase().includes(q)
+        );
+        searchResults.innerHTML = matches.length
+            ? matches.map(item => `
+                <div class="search-item">
+                    <img src="${item.img}" alt="${item.name}">
+                    <div class="search-item-info">
+                        <h4>${item.name}</h4>
+                        <span>${item.cat}</span>
+                    </div>
+                </div>
+            `).join('')
+            : '<div style="padding:1rem;text-align:center;color:var(--fg-faint);font-size:0.85rem;">No results found</div>';
     });
 
     // === GALLERY MODAL ===
