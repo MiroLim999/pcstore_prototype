@@ -146,9 +146,8 @@ ul { list-style: none; }
 /* === HERO === */
 .hero {
     position: relative;
-    height: 85vh;
-    min-height: 500px;
-    max-height: 800px;
+    width: 100%;
+    aspect-ratio: 1920 / 800;
     margin-top: 64px;
     padding: 0.95rem;
     overflow: hidden;
@@ -991,7 +990,7 @@ ul { list-style: none; }
 
     .contain, .nav-inner, .hero-content { padding-left: 1.5rem; padding-right: 1.5rem; }
 
-    .hero { height: 70vh; padding: 0.95rem; }
+    .hero { padding: 0.95rem; }
     .hero-img, .hero-overlay { top: 0.95rem; left: 0.95rem; right: 0.95rem; bottom: 0.95rem; }
     .hero-img { width: calc(100% - 1.9rem); height: calc(100% - 1.9rem); }
     .hero-content h1 { font-size: 2.2rem; letter-spacing: -1px; }
