@@ -509,12 +509,16 @@ body {
     }
 }
 
-/* === BRANDS CAROUSEL === */
+/* === BRANDS CAROUSEL (slider) === */
 .brands-section {
-    padding: 4rem 2rem;
+    padding: 4rem 0;
     background: var(--gray-50);
     border-top: 1px solid var(--gray-100);
     border-bottom: 1px solid var(--gray-100);
+}
+
+.brands-label {
+    padding: 0 2rem;
 }
 
 .brands-label {
@@ -527,59 +531,70 @@ body {
     margin-bottom: 2rem;
 }
 
-.brands-carousel {
+@keyframes scroll-slider {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(calc(-200px * 11)); }
+}
+
+.slider {
+    background: var(--white);
+    box-shadow: 0 10px 30px -8px rgba(0, 0, 0, 0.08);
+    height: 100px;
     overflow: hidden;
     position: relative;
-    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    width: 100%;
 }
 
-.brands-track {
+.slider::before,
+.slider::after {
+    content: "";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 160px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.slider::before {
+    left: 0;
+    background: linear-gradient(to right, var(--white) 0%, transparent 100%);
+}
+
+.slider::after {
+    right: 0;
+    background: linear-gradient(to left, var(--white) 0%, transparent 100%);
+}
+
+.slide-track {
+    animation: scroll-slider 40s linear infinite;
     display: flex;
-    gap: 1.5rem;
-    animation: scroll-brands 40s linear infinite;
-    width: max-content;
+    width: calc(200px * 22);
 }
 
-.brands-carousel:hover .brands-track {
+.slider:hover .slide-track {
     animation-play-state: paused;
 }
 
-.brand-card {
-    flex-shrink: 0;
-    padding: 1rem 2.5rem;
-    background: var(--white);
-    border-radius: var(--radius-md);
-    border: 1px solid var(--gray-100);
-    box-shadow: var(--shadow-sm);
+.slide {
+    height: 100px;
+    width: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0 2rem;
+}
+
+.slide img {
+    height: 36px;
+    width: auto;
+    max-width: 130px;
+    object-fit: contain;
     transition: var(--transition);
-    min-width: 140px;
 }
 
-.brand-card span {
-    font-family: var(--font-display);
-    font-weight: 600;
-    font-size: 0.9rem;
-    color: var(--gray-400);
-    letter-spacing: 0.5px;
-}
-
-.brand-card:hover {
-    border-color: var(--gray-200);
-    box-shadow: var(--shadow-md);
-    transform: translateY(-2px);
-}
-
-.brand-card:hover span {
-    color: var(--gray-700);
-}
-
-@keyframes scroll-brands {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+.slide:hover img {
+    transform: scale(1.08);
 }
 
 /* === SECTION COMMON === */
