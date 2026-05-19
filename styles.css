@@ -1204,15 +1204,16 @@ ul {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.2rem 0.45rem;
+  padding: 0.15rem 0.4rem;
   border-radius: var(--radius-pill);
   background: var(--accent-soft);
   color: var(--accent);
-  font-size: 0.55rem;
+  font-size: 0.5rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.4px;
   text-align: center;
+  white-space: nowrap;
 }
 
 @media (max-width: 1024px) {
@@ -1250,7 +1251,7 @@ ul {
 }
 
 .process-header {
-  margin-bottom: 3.5rem;
+  margin-bottom: 2.5rem;
 }
 .process-header h2 {
   font-family: var(--ff-display);
@@ -1259,92 +1260,151 @@ ul {
   letter-spacing: -0.75px;
 }
 
+.process-header p {
+  margin-top: 0.35rem;
+  color: var(--fg-muted);
+  font-size: 1rem;
+  max-width: 52ch;
+}
+
 .process-steps {
+  position: relative;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0;
-  position: relative;
+  gap: 1.75rem;
+  --process-rail: 52px;
+  --process-offset: 2.75rem;
+  padding-left: var(--process-offset);
 }
 
-.step {
-  position: relative;
-  padding: 0 2rem 0 0;
-}
-
-.step-line {
+.process-steps::before {
+  content: "";
   position: absolute;
-  top: 18px;
-  left: 36px;
-  right: 0;
-  height: 1px;
+  left: calc(var(--process-offset) + (var(--process-rail) / 2));
+  top: 0;
+  bottom: 0;
+  width: 1px;
   background: var(--border);
 }
-.step:last-child .step-line {
-  display: none;
+
+.process-item {
+  display: grid;
+  grid-template-columns: var(--process-rail) 1fr;
+  gap: 1.5rem;
+  align-items: start;
 }
 
-.step-dot {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  border: 2px solid var(--border);
+.process-rail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.process-count {
+  font-family: var(--ff-display);
+  font-size: 0.72rem;
+  letter-spacing: 1.2px;
+  color: var(--fg-faint);
+}
+
+.process-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--bg);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--ff-display);
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: var(--fg-faint);
-  background: var(--bg);
-  position: relative;
-  z-index: 1;
-  margin-bottom: 1.5rem;
-  transition:
-    border-color var(--speed),
-    color var(--speed),
-    background var(--speed);
-}
-
-.step:hover .step-dot {
-  border-color: var(--accent);
   color: var(--accent);
-  background: var(--accent-soft);
+  font-size: 1.1rem;
+  box-shadow: var(--shadow-s);
 }
 
-.step-content h3 {
+.process-body {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) + 2px);
+  padding: 1.25rem 1.5rem;
+  box-shadow: var(--shadow-s);
+}
+
+.process-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.35rem;
+}
+
+.process-body h3 {
   font-family: var(--ff-display);
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: 600;
-  margin-bottom: 0.5rem;
   letter-spacing: -0.3px;
 }
 
-.step-content p {
-  font-size: 0.85rem;
+.process-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-pill);
+  background: var(--accent-soft);
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+.process-body p {
+  font-size: 0.9rem;
   color: var(--fg-muted);
-  line-height: 1.6;
-  max-width: 240px;
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+}
+
+.process-list {
+  list-style: none;
+  display: grid;
+  gap: 0.35rem;
+  color: var(--fg-faint);
+  font-size: 0.8rem;
+}
+
+.process-list li::before {
+  content: "•";
+  color: var(--accent);
+  margin-right: 0.45rem;
 }
 
 @media (max-width: 768px) {
+  .process {
+    padding: 4rem 0;
+  }
   .process-steps {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    padding-left: 2.5rem;
+    --process-rail: 44px;
+    --process-offset: 2.25rem;
+    padding-left: var(--process-offset);
+    gap: 1.5rem;
   }
-  .step {
-    padding: 0;
+  .process-item {
+    gap: 1rem;
   }
-  .step-line {
-    top: 36px;
-    left: 18px;
-    right: auto;
-    width: 1px;
-    height: calc(100% + 2rem);
+  .process-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
   }
-  .step-dot {
-    position: absolute;
-    left: -2.5rem;
+  .process-body {
+    padding: 1.1rem 1.2rem;
+  }
+  .process-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
+  .process-badge {
+    font-size: 0.65rem;
   }
 }
 
