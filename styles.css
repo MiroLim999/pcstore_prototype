@@ -838,90 +838,9 @@ ul { list-style: none; }
 .footer-bar a { color: rgba(255,255,255,0.35); margin-left: 1.5rem; transition: color var(--speed); }
 .footer-bar a:hover { color: #fff; }
 
-/* === HOW IT WORKS === */
-.how-it-works {
-    padding: 3rem 0;
-    border-top: 1px solid var(--border);
-}
-
-.how-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.25rem;
-}
-
-.how-step {
-    position: relative;
-    padding: 2rem 1.75rem;
-    background: var(--bg-alt);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    transition: transform var(--speed) var(--ease), box-shadow var(--speed) var(--ease), border-color var(--speed);
-}
-
-.how-step:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-m);
-    border-color: var(--accent);
-}
-
-.how-num {
-    position: absolute;
-    top: 1.5rem;
-    right: 1.75rem;
-    font-family: var(--ff-display);
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--fg);
-    opacity: 0.06;
-    letter-spacing: -2px;
-    transition: opacity var(--speed);
-}
-
-.how-step:hover .how-num {
-    opacity: 0.12;
-    color: var(--accent);
-}
-
-.how-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
-    font-size: 1.5rem;
-    color: var(--accent);
-    background: var(--accent-soft);
-    border-radius: 10px;
-    margin-bottom: 1.25rem;
-}
-
-.how-step h3 {
-    font-family: var(--ff-display);
-    font-size: 1.05rem;
-    font-weight: 600;
-    color: var(--fg);
-    margin-bottom: 0.5rem;
-    letter-spacing: -0.3px;
-}
-
-.how-step p {
-    font-size: 0.85rem;
-    color: var(--fg-muted);
-    line-height: 1.6;
-}
-
-@media (max-width: 1024px) {
-    .how-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
-@media (max-width: 640px) {
-    .how-grid { grid-template-columns: 1fr; }
-}
-
 /* === FEATURED BRANDS STRIP === */
 .brands-strip {
-    padding: 3rem 0;
+    padding: 5rem 0;
     border-top: 1px solid var(--border);
 }
 
@@ -976,6 +895,104 @@ ul { list-style: none; }
 @media (max-width: 640px) {
     .brands-strip-grid { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* === THE PROCESS === */
+.process {
+    padding: 5rem 0;
+}
+
+.process-header {
+    margin-bottom: 3.5rem;
+}
+.process-header h2 {
+    font-family: var(--ff-display);
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 700;
+    letter-spacing: -0.75px;
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    position: relative;
+}
+
+.step {
+    position: relative;
+    padding: 0 2rem 0 0;
+}
+
+.step-line {
+    position: absolute;
+    top: 18px;
+    left: 36px;
+    right: 0;
+    height: 1px;
+    background: var(--border);
+}
+.step:last-child .step-line { display: none; }
+
+.step-dot {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 2px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--ff-display);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--fg-faint);
+    background: var(--bg);
+    position: relative;
+    z-index: 1;
+    margin-bottom: 1.5rem;
+    transition: border-color var(--speed), color var(--speed), background var(--speed);
+}
+
+.step:hover .step-dot {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--accent-soft);
+}
+
+.step-content h3 {
+    font-family: var(--ff-display);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.3px;
+}
+
+.step-content p {
+    font-size: 0.85rem;
+    color: var(--fg-muted);
+    line-height: 1.6;
+    max-width: 240px;
+}
+
+@media (max-width: 768px) {
+    .process-steps {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding-left: 2.5rem;
+    }
+    .step { padding: 0; }
+    .step-line {
+        top: 36px;
+        left: 18px;
+        right: auto;
+        width: 1px;
+        height: calc(100% + 2rem);
+    }
+    .step-dot {
+        position: absolute;
+        left: -2.5rem;
+    }
+}
+
 /* === SEARCH OVERLAY === */
 .search-overlay {
     position: fixed;
