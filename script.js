@@ -83,9 +83,12 @@
     ];
 
     function openSearch() {
+        const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+        document.body.style.overflow = 'hidden';
+        document.body.style.paddingRight = scrollbarWidth + 'px';
+        navbar.style.paddingRight = scrollbarWidth + 'px';
         searchOverlay.classList.add('active');
         setTimeout(() => searchInput.focus(), 100);
-        document.body.style.overflow = 'hidden';
     }
 
     function closeSearch() {
@@ -93,6 +96,8 @@
         searchInput.value = '';
         searchResults.innerHTML = '';
         document.body.style.overflow = '';
+        document.body.style.paddingRight = '';
+        navbar.style.paddingRight = '';
     }
 
     searchBtn.addEventListener('click', openSearch);
@@ -133,13 +138,18 @@
     function openGallery(idx) {
         currentIdx = idx;
         updateModal();
-        modal.classList.add('active');
+        const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
         document.body.style.overflow = 'hidden';
+        document.body.style.paddingRight = scrollbarWidth + 'px';
+        navbar.style.paddingRight = scrollbarWidth + 'px';
+        modal.classList.add('active');
     }
 
     function closeGallery() {
         modal.classList.remove('active');
         document.body.style.overflow = '';
+        document.body.style.paddingRight = '';
+        navbar.style.paddingRight = '';
     }
 
     function updateModal() {
