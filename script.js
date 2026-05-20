@@ -1,6 +1,12 @@
 (function () {
     'use strict';
 
+    // === SCROLL NAVBAR ===
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 10);
+    }, { passive: true });
+
     // === DARK MODE TOGGLE ===
     const toggle = document.getElementById('themeToggle');
     const root = document.documentElement;
