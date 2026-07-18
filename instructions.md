@@ -43,6 +43,7 @@ The UI must feel:
 - futuristic
 - polished
 - believable as a real startup/product
+- setup
 
 ==================================================
 TECH STACK
